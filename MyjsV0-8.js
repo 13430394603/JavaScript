@@ -1671,7 +1671,6 @@
 	}
 /********************************************************************************/
 	/**
-	 * 
 	 * extends 继承支持对象	V2
 	 * 方法解析 ：
 	 *	对继承的讲解
@@ -1686,13 +1685,34 @@
 	 *
 	 * @author 威 
 	 * 2018/3/19 下午16:30:25 
-	 *
 	 */
 	Function.prototype.extends = function(superClassName){
 		var Super_ = function(){};
 		eval("Super_.prototype = " + superClassName.getName() + ".prototype ;") ;
 		eval(this.getName()+".prototype = new Super_() ;") ;
 	}
+	/**
+	 * extends 继承支持对象	V3
+	 * 不同于以往版本的方式	
+	 * 案例：
+	 *		请查看同文件夹的extends.js中的案例
+	 * @author 威 
+	 * 2018/7/29 晚上
+	 */
+	var __hasProp = {}.hasOwnProperty;
+	var __extends = function(child, parent) { 
+		for (var key in parent) { 
+			if (__hasProp.call(parent, key)) 
+				child[key] = parent[key]; 
+		} 
+		function ctor() { 
+			this.constructor = child; 
+		} 
+		ctor.prototype = parent.prototype; 
+		child.prototype = new ctor(); 
+		child.__super__ = parent.prototype;
+		return child; 
+	};
 	/*
 	 * InheritSupport 继承支持对象 过时
 	 * 方法解析 ：
