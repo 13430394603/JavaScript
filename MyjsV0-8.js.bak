@@ -1854,17 +1854,17 @@
 	 * FormAjax  
 	 * desc:
 	 * 		对表单异步提交数据的支持
-	 * V-2.1
-	 * 修改内容：
-	 * 		可设置超时异常	isTimeoutError 默认为true启动超时异常策略    false则关闭   	2017/12/6  
-	 * 		添加后台失败回调方法	fail(data) 会触发dataobj.error方法				 	2017/12/17
-	 * 		后台失败响应方法		FormAjaxUtil.failAccess	
 	 * V-2
 	 * 修改内容：
 	 * 		增加超时异常提示方法	error
 	 * 		增加回调对象即当前创建的FormAjax对象		callbackObj   后台将通过回调对象向指定位置返回成功访问的数据  
 	 * 		这是后台的改动						后台相应的对象提供接口获取返回结果
-	 * 		后台调用参数方式和表单提交一致						2017/12/17
+	 * 		后台调用参数方式和表单提交一致
+	 * V-2.1
+	 * 修改内容：
+	 * 		可设置超时异常	isTimeoutError 默认为true启动超时异常策略    false则关闭   	2017/12/6  
+	 * 		添加后台失败回调方法	fail(data) 会触发dataobj.error方法				 	2017/12/17
+	 * 		后台失败响应方法		FormAjaxUtil.failAccess							2017/12/17
 	 * 案例：
 	 *		var formAjax = new FormAjax({
 	 *			formEle:document.getElementById("formupload"),

@@ -54,7 +54,7 @@
 	Horse = (function(_super) {
 		__extends(Horse, _super);
 		function Horse() {
-			return Horse._super.constructor.apply(this, arguments);
+			return Horse._super.prototype.constructor.apply(this, arguments);
 		}
 		Horse.prototype.move = function() {
 			alert("Galloping...");
