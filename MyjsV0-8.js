@@ -1790,7 +1790,7 @@
 		} 
 		ctor.prototype = parent.prototype; 
 		child.prototype = new ctor(); 
-		child.__super__ = parent.prototype;
+		child.__super = parent.prototype;
 		return child; 
 	};
 	/*
